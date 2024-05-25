@@ -1,0 +1,16 @@
+2024-05-25 18:13:05 INFO  Get01_fact:26 - Go to URL: https://catfact.ninja/fact
+2024-05-25 18:13:12 INFO  Get01_fact:31 - User Sends Request with GET Method
+2024-05-25 18:13:12 INFO  Get01_fact:35 - Status Code : 200 and  Content Type is application/json
+2024-05-25 18:13:12 INFO  Get03_facts:26 - Go to URL: https://catfact.ninja/facts
+2024-05-25 18:13:13 INFO  Get03_facts:31 - User Sends Request with GET Method
+2024-05-25 18:13:13 INFO  Get03_facts:35 - Status Code : 200 and  Content Type is application/json
+2024-05-25 18:13:13 INFO  Get02_maxLength:33 - Go to URL: https://catfact.ninja/fact?max_length=30
+2024-05-25 18:13:14 INFO  Get02_maxLength:37 - User Sends Request with GET Method
+2024-05-25 18:13:14 INFO  Get02_maxLength:42 - Status Code : 200 and  Content Type is application/json
+2024-05-25 18:13:14 INFO  Get02_maxLength:48 - Assert that lenght <= 30
+2024-05-25 18:13:14 INFO  Get04_maxLength_limit:34 - Go to URL: https://catfact.ninja/facts?max_length=40&limit=2
+2024-05-25 18:13:15 INFO  Get04_maxLength_limit:38 - User Sends Request with GET Method
+2024-05-25 18:13:17 INFO  Get04_maxLength_limit:45 - Status Code : 200 and  
+Content Type is application/json 
+data.length is less than or equal to 40 
+data size is equal to limit

@@ -6,11 +6,8 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.Test;
 import pojoDatas.CatFactDataPojo;
-
 import java.util.HashMap;
-
 import static io.restassured.RestAssured.given;
-import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class Get02_maxLength extends CatFactBaseURL {
@@ -24,8 +21,9 @@ public class Get02_maxLength extends CatFactBaseURL {
 
 
     @Test
-    public  void get01(){
-        CatFactDataPojo dataPojo = new CatFactDataPojo();
+    public  void get02(){
+        CatFactDataPojo dataPojo = new CatFactDataPojo(200, "application/json",30 );
+
         PropertyConfigurator.configure("log4j.properties");
         Logger logger = Logger.getLogger(Get02_maxLength.class);
 
@@ -48,9 +46,6 @@ public class Get02_maxLength extends CatFactBaseURL {
         assertTrue ( length <= dataPojo.getLength() );
 
         logger.info("Assert that lenght <= 30");
-
-
-
     }
 
 }

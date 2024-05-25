@@ -1,18 +1,16 @@
 package getRequests;
 
 import baseURL.CatFactBaseURL;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.Test;
 import pojoDatas.CatFactDataPojo;
-
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.everyItem;
 import static org.hamcrest.Matchers.lessThan;
-import static org.testng.AssertJUnit.assertTrue;
+
 
 public class Get04_maxLength_limit extends CatFactBaseURL {
      /*
@@ -25,8 +23,9 @@ public class Get04_maxLength_limit extends CatFactBaseURL {
      */
 
     @Test
-    public void get02() {
-        CatFactDataPojo dataPojo = new CatFactDataPojo();
+    public void get04() {
+        CatFactDataPojo dataPojo = new CatFactDataPojo(200, "application/json",40,4 );
+
         PropertyConfigurator.configure("log4j.properties");
         Logger logger = Logger.getLogger(Get04_maxLength_limit.class);
 
@@ -47,6 +46,5 @@ public class Get04_maxLength_limit extends CatFactBaseURL {
                 "Content Type is application/json \n" +
                 "data.length is less than or equal to 40 \n" +
                 "data size is equal to limit");
-
     }
 }

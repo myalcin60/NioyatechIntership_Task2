@@ -10,7 +10,7 @@ public class CatFactBaseURL {
 
     @Before
 
-    public void setUpBaseURL(){
+    public void BaseURL(){
 
         specification= new RequestSpecBuilder().setBaseUri("https://catfact.ninja/").build();
 

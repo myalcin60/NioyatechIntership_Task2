@@ -1,7 +1,6 @@
 package getRequests;
 
 import baseURL.CatFactBaseURL;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -15,13 +14,12 @@ public class Get03_facts extends CatFactBaseURL {
     Given User send get reguest with factS endpoint
     Then  User assert that statusCode is 200
     And  User assert that Content type is "application/json"
-    And User assert that length is less than or equal to 30
-
      */
 
     @Test
-    public void get02() {
-        CatFactDataPojo dataPojo = new CatFactDataPojo();
+    public void get03() {
+
+        CatFactDataPojo dataPojo = new CatFactDataPojo(200, "application/json" );
         PropertyConfigurator.configure("log4j.properties");
         Logger logger = Logger.getLogger(Get03_facts.class);
         specification.pathParam("firstPath", "facts");

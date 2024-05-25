@@ -2,11 +2,26 @@ package pojoDatas;
 
 public class CatFactDataPojo {
 
-    private  int statusCode = 200;
-    private  String contentType = "application/json";
-    private int length = 30;
+    private  int statusCode;
+    private  String contentType;
+    private int length;
 
-    private int limite = 2;
+    private int limite;
+
+    public CatFactDataPojo(int statusCode, String contentType, int length, int limite) {
+        this.statusCode = statusCode;
+        this.contentType = contentType;
+        this.length = length;
+        this.limite = limite;
+    }   public CatFactDataPojo(int statusCode, String contentType, int length) {
+        this.statusCode = statusCode;
+        this.contentType = contentType;
+        this.length = length;
+    }   public CatFactDataPojo(int statusCode, String contentType) {
+        this.statusCode = statusCode;
+        this.contentType = contentType;
+    }
+
 
     public CatFactDataPojo() {
     }
